@@ -20,3 +20,4 @@ Route::get('/laporan', Laporan::class,)->middleware(['auth'])->name('laporan');
 Route::get('/produk', Produk::class,)->middleware(['auth'])->name('produk');
 Route::get('/transaksi', Transaksi::class,)->middleware(['auth'])->name('transaksi');
 Route::get('/cetak', ['App\Http\Controllers\HomeController', 'cetak']);
+Route::get('/laporan/view/pdf', [Laporan::class, 'view_pdf']);
